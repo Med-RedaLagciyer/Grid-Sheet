@@ -1,0 +1,88 @@
+/* Import Tabler CSS Files */
+@import '../vendor/tabler/dist/css/tabler.css';
+@import '../vendor/tabler/dist/css/tabler-flags.css';
+@import '../vendor/tabler/dist/css/tabler-socials.css';
+@import '../vendor/tabler/dist/css/tabler-payments.css';
+@import '../vendor/tabler/dist/css/tabler-vendors.css';
+@import '../vendor/tabler/dist/css/tabler-marketing.css';
+@import '../vendor/tabler/dist/css/tabler-themes.css';
+
+/* Import Satoshi Font AFTER Tabler to override */
+@import '../fonts/Satoshi_Complete/Fonts/WEB/css/satoshi.css';
+
+/* Import Styro Font AFTER Tabler to override */
+@import '../fonts/Kihim_Complete/Fonts/WEB/css/kihim.css';
+
+/* Import SweetAlert2 styles */
+@import '~sweetalert2/dist/sweetalert2.min.css';
+
+/* Import Toastr styles */
+@import '~toastr/build/toastr.min.css';
+
+/* Import Font Awesome */
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+
+/* Import Select2 styles */
+@import '~select2/dist/css/select2.min.css';
+
+/* Import Ladda styles */
+@import '~ladda/dist/ladda.min.css';
+
+/* Import Notyf styles */
+@import '~notyf/notyf.min.css';
+
+/* Import DataTables styles */
+@import '~datatables.net-bs5/css/dataTables.bootstrap5.min.css';
+@import '~datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css';
+@import '~datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css';
+
+/* Override Tabler's font with Satoshi everywhere */
+:root {
+    --tblr-font-sans-serif: 'Satoshi-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+body,
+html,
+* {
+    font-family: 'Satoshi-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* Fix Toastr styling conflicts with Tabler */
+#toast-container > div {
+    opacity: 1 !important;
+    color: #fff !important;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+#toast-container .toast-success {
+    background-color: #51a351 !important;
+}
+
+#toast-container .toast-error {
+    background-color: #bd362f !important;
+}
+
+#toast-container .toast-info {
+    background-color: #2f96b4 !important;
+}
+
+#toast-container .toast-warning {
+    background-color: #f89406 !important;
+}
+
+/* Custom navbar logo styling */
+.navbar-brand a {
+    font-family: 'Kihim-Regular', sans-serif !important;
+    font-size: 5rem !important;
+    text-decoration: none !important;
+    color: #f8fafc !important;
+}
+
+.navbar-brand a:hover {
+    color: white !important;
+    text-decoration: none !important;
+}
+

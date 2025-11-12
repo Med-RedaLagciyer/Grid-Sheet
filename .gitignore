@@ -1,0 +1,50 @@
+###> symfony/framework-bundle ###
+/.env.local
+.env
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+
+###> doctrine/doctrine-migrations-bundle ###
+/migrations/*.php
+!/migrations/.gitkeep
+###< doctrine/doctrine-migrations-bundle ###
+
+# Cache & Logs
+/var/cache/*
+/var/log/*
+*.log
+
+# Uploads
+/public/uploads/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
