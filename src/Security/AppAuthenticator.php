@@ -80,6 +80,7 @@ class AppAuthenticator extends AbstractLoginFormAuthenticator
 
                     if ($user->getCountAttempts() >= 3) {
                         $user->setIsBlocked(true);
+                        $user->setBlockedAt(new \DateTimeImmutable('now'));
                         $this->em->flush();
                         throw new CustomUserMessageAuthenticationException("Your password is incorrect! Your account is now blocked due to multiple failed login attempts.");
                     }
