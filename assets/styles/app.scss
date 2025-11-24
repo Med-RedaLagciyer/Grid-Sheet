@@ -42,6 +42,7 @@
 /* Override Tabler's font with Satoshi everywhere */
 :root {
     --tblr-font-sans-serif: 'Satoshi-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    --tblr-font-sans-serif-bold: 'Satoshi-Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 body,
@@ -75,8 +76,7 @@ html,
 
 /* Custom navbar logo styling */
 .navbar-brand a {
-    // font-family: 'Kihim-Regular', sans-serif !important;
-    // font-size: 5rem !important;
+    font-size: 35px !important;
     text-decoration: none !important;
     color: #f8fafc !important;
 }
@@ -84,5 +84,22 @@ html,
 .navbar-brand a:hover {
     color: white !important;
     text-decoration: none !important;
+}
+
+// sidebare remove scrollbar
+.navbar-vertical.navbar-expand-lg {
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.navbar-vertical.navbar-expand-lg::-webkit-scrollbar {
+    display: none;
+}
+
+// page container full width
+.container-xl{
+    max-width: 100% !important;
 }
 

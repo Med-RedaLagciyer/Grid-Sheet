@@ -1,1 +1,1 @@
-{"base_url":"","routes":[],"prefix":"","host":"localhost","port":"","scheme":"http","locale":""}
+{"base_url":"","routes":{"send_email":{"tokens":[["text","\/send-email"]],"defaults":[],"requirements":[],"hosttokens":[],"methods":[],"schemes":[]},"account_activate":{"tokens":[["variable","\/","[^\/]++","token",true],["text","\/activate"]],"defaults":[],"requirements":[],"hosttokens":[],"methods":[],"schemes":[]}},"prefix":"","host":"localhost","port":"","scheme":"http","locale":""}

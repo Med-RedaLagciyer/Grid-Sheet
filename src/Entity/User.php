@@ -61,6 +61,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(nullable: true)]
     private ?int $countAttempts = 0;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $verificationToken = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $countVerificationEmails = 0;
+
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $lastVerificationEmailAt = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $reset_password_token = null;
+
     public function __construct()
     {
         $this->loginAttempts = new ArrayCollection();
@@ -257,6 +269,54 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setCountAttempts(?int $countAttempts): static
     {
         $this->countAttempts = $countAttempts;
+
+        return $this;
+    }
+
+    public function getVerificationToken(): ?string
+    {
+        return $this->verificationToken;
+    }
+
+    public function setVerificationToken(?string $verificationToken): static
+    {
+        $this->verificationToken = $verificationToken;
+
+        return $this;
+    }
+
+    public function getCountVerificationEmails(): ?int
+    {
+        return $this->countVerificationEmails;
+    }
+
+    public function setCountVerificationEmails(?int $countVerificationEmails): static
+    {
+        $this->countVerificationEmails = $countVerificationEmails;
+
+        return $this;
+    }
+
+    public function getLastVerificationEmailAt(): ?\DateTimeImmutable
+    {
+        return $this->lastVerificationEmailAt;
+    }
+
+    public function setLastVerificationEmailAt(?\DateTimeImmutable $lastVerificationEmailAt): static
+    {
+        $this->lastVerificationEmailAt = $lastVerificationEmailAt;
+
+        return $this;
+    }
+
+    public function getResetPasswordToken(): ?string
+    {
+        return $this->reset_password_token;
+    }
+
+    public function setResetPasswordToken(?string $reset_password_token): static
+    {
+        $this->reset_password_token = $reset_password_token;
 
         return $this;
     }

@@ -1,0 +1,30 @@
+<div class="page-header d-print-none mt-3">
+    <div class="container-xl">
+        <div class="row g-2 align-items-center">
+            <div class="col">
+                <!-- Page pre-title -->
+                <div class="page-pretitle">Overview</div>
+                <h2 class="page-title">Vertical layout</h2>
+            </div>
+              <!-- Page title actions -->
+            <div class="col-auto ms-auto d-print-none">
+                <div class="btn-list d-none d-lg-flex">
+                    <a href="#" class="nav-link d-flex lh-1 p-0 px-2" data-bs-toggle="dropdown" aria-label="Open user menu">
+                        <span class="avatar avatar-sm" style="border-radius:50%;background-image: url({{ asset('build/images/avatars/placeholder.webp') }})"> </span>
+                            <div class="d-none d-xl-block ps-2">
+                            <div>{{app.user.email}}</div>
+                            <div class="mt-1 small text-secondary">UI Designer</div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <a href="./profile.html" class="dropdown-item">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="{{path('app_logout')}}" class="dropdown-item">Logout</a>
+                    </div>
+                </div>
+                <!-- BEGIN MODAL -->
+                <!-- END MODAL -->
+            </div>
+        </div>
+    </div>
+</div>
